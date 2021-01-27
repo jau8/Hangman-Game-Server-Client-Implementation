@@ -1,15 +1,15 @@
-#### Hangman Game -- C++ Implementation
+# Hangman Game -- C++ Implementation
 
-### Author: Jason Au
+## Author: Jason Au
 
-### How to Run the Game?
-## Compiling
+## How to Run the Game?
+### Compiling
 Open terminal and go to the main directory that contains server.cpp and client.cpp.
 Compile the cpp files by running 'make'. Once done, client and server should appear
 in the file directory.
 
-## Running
-# Server
+### Running
+#### Server
 To run the server, use the following command:
 './server [PORT NUMBER] [Name or directory of TEXT FILE (optional)]'
 If the user chooses to input a text file, then the server will extract words from
@@ -23,7 +23,7 @@ Line 3: Word 2
 ...
 Line n: Word n
 Even though word length is specified, the program can support any word lengths.
-# Client
+#### Client
 To run client, use the following command:
 './client 127.0.0.1 [Backdoor Place of the word in the file (optional)]'
 If the user decides to input a backdoor argument, then the program will choose
@@ -32,7 +32,7 @@ If the user does not input a backdoor argument, then the program will generate a
 random word in the text file.
 
 ### High Level Description of Implementation
-## Intro
+#### Intro
 This program implements the classic hangman game as a console application with 
 C++, socket programming, and multithreaded programming. 
 The program will generate a word from a dictionary file. The player then has
@@ -48,7 +48,7 @@ At the end of the game, each user will be given a score based on their
 performance and ranked in a leader board. 
 
 ### Messages Printed by Server and Client during the Program Flow
-## Server
+#### Server
 ./server 2017
 Server Listening...
 Connection Accepted
@@ -86,7 +86,7 @@ User: Arthur guess: t
 User: Arthur guess: y
 Arthur's score is 0.00
 
-## Client (Player 1)
+#### Client (Player 1)
 ./client 127.0.0.1 2017
 Welcome to Hangman!
 Enter username: Jingfan
@@ -129,7 +129,7 @@ Leader Board
 
 Jingfan 0.80
 
-## Client (Player 2)
+#### Client (Player 2)
 ./client 127.0.0.1 2017
 Welcome to Hangman!
 Enter username: Jason
@@ -201,7 +201,7 @@ Leader Board
 Jason 0.44
 Jingfan 0.80
 
-## Client (Player 3)
+#### Client (Player 3)
 ./client 127.0.0.1 2017
 Welcome to Hangman!
 Enter username: Arthur
@@ -255,8 +255,8 @@ Arthur 0.00
 Jason 0.44
 Jingfan 0.80
 
-## Edge Cases
-# Incorrect Input
+### Edge Cases
+#### Incorrect Input
 Welcome to Hangman!
 Enter username: Jason
 Read to play? (Y/N): y
@@ -283,10 +283,10 @@ Error! Please guess ONE letter.
 Error! Please guess one LETTER.
 Letter to guess: 
 
-# Dictionary File Does Not Exist
+#### Dictionary File Does Not Exist
 ./server 2017 Hello.txt
 Error: Cannot open input file
 
-# Working Dictionary File
+#### Working Dictionary File
 ./server 2018 words.txt
 Server Listening...
