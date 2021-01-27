@@ -39,7 +39,7 @@ The program will generate a word from a dictionary file. The player then has
 to try to guess the word by suggesting letters within 6 tries. A score is
 calculated and given to the user at the end of the game based on if the user
 has guessed the word correct, how many tries, and how long the word is.
-### Multi-player Support
+#### Multi-player Support
 This program support multiple players using multithreaded programming. Each
 user is a thread. Since the users do not compete with each other directly,
 the players do not have to wait for each other to start the game. One player
